@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SV Health Coaching | Fitness Coach for Busy Executives & Professionals</title>
+<meta name="description" content="Online fitness coach for executives and busy professionals aged 30-55. Custom training, nutrition, and accountability. Build muscle, lose fat, and reclaim your health — in just 3 hours per week.">
+<meta property="og:title" content="SV Health Coaching | Executive Fitness & Habit Reform">
+<meta property="og:description" content="Trusted by 600+ clients including Premier League athletes and TV personalities. The executive health system for men 30-55.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://www.svhealthcoaching.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<style>
+/* ─── RESET & TOKENS ─── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:    #0E0D0C;
+  --bg2:   #161310;
+  --bg3:   #1E1916;
+  --bg4:   #252018;
+  --or:    #E8782A;
+  --or2:   #F09445;
+  --or3:   #C5601A;
+  --or-10: rgba(232,120,42,.10);
+  --or-15: rgba(232,120,42,.15);
+  --or-25: rgba(232,120,42,.25);
+  --t1:    #FFFFFF;
+  --t2:    rgba(255,255,255,.88);
+  --t3:    rgba(255,255,255,.42);
+  --t4:    rgba(255,255,255,.20);
+  --bd:    rgba(255,255,255,.07);
+  --bd2:   rgba(255,255,255,.12);
+  --df:    'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --db:    'Montserrat', system-ui, sans-serif;
+  --sh-txt: 0 2px 6px rgba(0,0,0,.85), 0 4px 18px rgba(0,0,0,.55);
+  --r:     4px;
+  --sh:    0 2px 8px rgba(0,0,0,.35), 0 8px 32px rgba(0,0,0,.25), 0 24px 64px rgba(0,0,0,.15);
+  --sh-or: 0 4px 20px rgba(232,120,42,.20), 0 12px 40px rgba(232,120,42,.12);
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--db);
+  background:var(--bg);
+  color:var(--t1);
+  font-weight:400;
+  line-height:1.75;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Film grain overlay */
+body::after{
+  content:'';
+  position:fixed;
+  inset:0;
+  opacity:.03;
+  pointer-events:none;
+  z-index:9999;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--or-25);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--or)}
+
+/* ─── SELECTION ─── */
+::selection{background:var(--or);color:#000}
+
+/* ─── UTILITY ─── */
+.text-center{text-align:center}
+.mx-auto{margin-left:auto;margin-right:auto}
+.max-720{max-width:720px}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:1000;
+  padding:1.4rem 5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:padding .4s cubic-bezier(.22,1,.36,1), background .4s, border-color .4s;
+}
+nav.scrolled{
+  background:rgba(14,13,12,.96);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  padding:.9rem 5rem;
+  border-bottom:1px solid var(--bd);
+}
+.nav-logo img{
+  height:44px;
+  width:auto;
+  transition:height .35s cubic-bezier(.22,1,.36,1);
+  display:block;
+}
+nav.scrolled .nav-logo img{height:36px}
+.nav-links{
+  display:flex;
+  gap:2.5rem;
+  list-style:none;
+  align-items:center;
+}
+.nav-links a{
+  text-decoration:none;
+  color:var(--t2);
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  transition:color .25s;
+  cursor:pointer;
+  position:relative;
+}
+.nav-links a::after{
+  content:'';
+  position:absolute;
+  bottom:-.25rem;
+  left:0;right:0;
+  height:1px;
+  background:var(--or);
+  transform:scaleX(0);
+  transition:transform .3s cubic-bezier(.22,1,.36,1);
+}
+.nav-links a:hover{color:var(--or)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{
+  background:var(--or)!important;
+  color:#000!important;
+  padding:.6rem 1.5rem!important;
+  font-weight:700!important;
+  border-radius:var(--r)!important;
+  letter-spacing:.1em!important;
+  transition:background .25s, box-shadow .25s, transform .2s!important;
+}
+.nav-cta:hover{
+  background:var(--or2)!important;
+  box-shadow:var(--sh-or)!important;
+  transform:translateY(-1px)!important;
+}
+.nav-cta::after{display:none!important}
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+  z-index:1001;
+  padding:4px;
+}
+.menu-toggle span{
+  width:22px;
+  height:1.5px;
+  background:rgba(255,255,255,.85);
+  transition:transform .3s, opacity .3s;
+  display:block;
+}
+
+/* ─── BUTTONS ─── */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.95rem 2.4rem;
+  font-family:var(--db);
+  font-size:.75rem;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  text-decoration:none;
+  font-weight:700;
+  border-radius:var(--r);
+  cursor:pointer;
+  border:1.5px solid transparent;
+  transition:background .25s, border-color .25s, transform .2s cubic-bezier(.22,1,.36,1), box-shadow .25s;
+  white-space:nowrap;
+}
+.btn-or{
+  background:var(--or);
+  color:#000;
+  border-color:var(--or);
+}
+.btn-or:hover{
+  background:var(--or2);
+  border-color:var(--or2);
+  transform:translateY(-2px);
+  box-shadow:var(--sh-or);
+}
+.btn-or:active{transform:translateY(0)}
+.btn-ghost{
+  background:transparent;
+  color:var(--t2);
+  border-color:var(--bd2);
+}
+.btn-ghost:hover{
+  border-color:var(--or-25);
+  color:var(--or);
+}
+
+/* ─── SECTION CHROME ─── */
+.section-tag{
+  font-size:.67rem;
+  letter-spacing:.35em;
+  text-transform:uppercase;
+  color:var(--or);
+  margin-bottom:1.1rem;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  gap:.7rem;
+}
+.section-tag::before{
+  content:'';
+  width:20px;
+  height:1.5px;
+  background:var(--or);
+  flex-shrink:0;
+}
+.section-tag.center{justify-content:center}
+.section-tag.center::before{display:none}
+.section-title{
+  font-family:var(--df);
+  font-size:clamp(2.2rem,3.8vw,3.4rem);
+  font-weight:800;
+  line-height:1.1;
+  margin-bottom:1rem;
+  letter-spacing:-.03em;
+  color:#fff;
+  text-shadow:var(--sh-txt);
+}
+.section-title em{
+  font-style:normal;
+  color:var(--or);
+  text-shadow:0 2px 8px rgba(232,120,42,.3), 0 4px 16px rgba(0,0,0,.5);
+}
+.section-desc{
+  color:var(--t2);
+  font-size:1rem;
+  line-height:1.9;
+  margin-top:.8rem;
+}
+
+/* ─── REVEAL ANIMATION ─── */
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1);
+}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ══════════════════════════════════
+   HERO
+══════════════════════════════════ */
+.hero{
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  padding:8rem 2rem 5rem;
+}
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 20%, rgba(232,120,42,.055) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 20% 70%, rgba(232,120,42,.025) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(232,120,42,.02) 0%, transparent 50%),
+    linear-gradient(175deg, var(--bg2) 0%, var(--bg) 55%);
+}
+/* Subtle grid */
+.hero-grid{
+  position:absolute;
+  inset:0;
+  opacity:.018;
+  background-image:
+    linear-gradient(rgba(232,120,42,.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232,120,42,.8) 1px, transparent 1px);
+  background-size:72px 72px;
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, black, transparent 70%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, black, transparent 70%);
+}
+/* Top orange line */
+.hero::before{
+  content:'';
+  position:absolute;
+  top:0;left:50%;
+  transform:translateX(-50%);
+  width:280px;
+  height:1px;
+  background:linear-gradient(90deg, transparent, var(--or), transparent);
+  opacity:.6;
+}
+.hero-inner{
+  position:relative;
+  z-index:2;
+  max-width:860px;
+  animation:heroIn .9s cubic-bezier(.22,1,.36,1) both;
+}
+@keyframes heroIn{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+.hero-logo{
+  height:72px;
+  width:auto;
+  margin:0 auto 2.5rem;
+  animation:heroIn .9s .08s cubic-bezier(.22,1,.36,1) both;
+  display:block;
+}
+.hero-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:var(--or-10);
+  border:1px solid var(--or-15);
+  color:var(--or);
+  font-size:.67rem;
+  font-weight:700;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  padding:.35rem .9rem;
+  border-radius:2rem;
+  margin-bottom:1.8rem;
+  animation:heroIn .9s .14s cubic-bezier(.22,1,.36,1) both;
+}
+.hero h1{
+  font-family:var(--df);
+  font-size:clamp(3.2rem,6.5vw,5.8rem);
+  font-weight:800;
+  line-height:1.05;
+  margin-bottom:1.6rem;
+  letter-spacing:-.03em;
+  color:#fff;
+  text-shadow:var(--sh-txt);
+  animation:heroIn .9s .22s cubic-bezier(.22,1,.36,1) both;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--or);
+  display:block;
+  text-shadow:0 2px 8px rgba(232,120,42,.35), 0 4px 20px rgba(0,0,0,.6);
+}
+.hero-sub{
+  font-size:1.1rem;
+  color:var(--t2);
+  max-width:600px;
+  margin:0 auto 2.8rem;
+  line-height:1.9;
+  animation:heroIn .9s .32s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-btns{
+  display:flex;
+  gap:1rem;
+  justify-content:center;
+  flex-wrap:wrap;
+  animation:heroIn .9s .42s cubic-bezier(.22,1,.36,1) both;
+}
+/* Scroll indicator */
+.hero-scroll{
+  position:absolute;
+  bottom:2.5rem;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.5rem;
+  color:var(--t3);
+  font-size:.65rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  animation:heroIn .9s .7s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-scroll-line{
+  width:1px;
+  height:48px;
+  background:linear-gradient(to bottom, var(--or-25), transparent);
+  animation:scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse{0%,100%{opacity:.5;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.1)}}
+
+/* ══════════════════════════════════
+   STAN PHOTO
+══════════════════════════════════ */
+.stan-section{
+  background:var(--bg);
+  padding:0 5rem 6rem;
+  text-align:center;
+}
+.stan-frame{
+  max-width:380px;
+  margin:0 auto;
+  position:relative;
+}
+.stan-img-wrap{
+  aspect-ratio:3/4;
+  background:linear-gradient(145deg, var(--bg3), var(--bg4));
+  border:1px solid var(--bd);
+  overflow:hidden;
+  position:relative;
+}
+.stan-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.stan-placeholder{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:1rem;
+  color:var(--t3);
+  font-size:.85rem;
+  letter-spacing:.08em;
+}
+.stan-placeholder-init{
+  font-family:var(--df);
+  font-size:4rem;
+  color:var(--or);
+  opacity:.25;
+  line-height:1;
+}
+/* Orange accent border on left edge */
+.stan-frame::before{
+  content:'';
+  position:absolute;
+  top:2rem;
+  left:-1.5rem;
+  width:3px;
+  height:60%;
+  background:linear-gradient(to bottom, var(--or), transparent);
+  border-radius:2px;
+}
+/* Stats badge */
+.stan-badge{
+  position:absolute;
+  bottom:-1.5rem;
+  right:-2rem;
+  background:var(--or);
+  color:#000;
+  padding:1rem 1.4rem;
+  text-align:center;
+  border-radius:var(--r);
+  box-shadow:var(--sh-or);
+}
+.stan-badge-num{
+  font-family:var(--df);
+  font-size:1.6rem;
+  font-weight:700;
+  line-height:1;
+  display:block;
+}
+.stan-badge-label{
+  font-size:.6rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  opacity:.8;
+  margin-top:.15rem;
+  display:block;
+}
+
+/* ══════════════════════════════════
+   TRUST BAR
+══════════════════════════════════ */
+.trust{
+  background:var(--bg2);
+  border-top:1px solid var(--bd);
+  border-bottom:1px solid var(--bd);
+  padding:3.5rem 5rem;
+}
+.trust-inner{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2rem;
+}
+.trust-item{
+  text-align:center;
+  padding:1.5rem 1rem;
+  position:relative;
+}
+.trust-item + .trust-item::before{
+  content:'';
+  position:absolute;
+  left:0;top:20%;
+  width:1px;
+  height:60%;
+  background:var(--bd);
+}
+.trust-num{
+  font-family:var(--df);
+  font-size:2.8rem;
+  color:var(--or);
+  font-weight:800;
+  line-height:1;
+  margin-bottom:.35rem;
+  text-shadow:0 2px 10px rgba(232,120,42,.3);
+}
+.trust-label{
+  font-size:.67rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--t3);
+  font-weight:600;
+}
+.trust-sub{
+  font-size:.82rem;
+  color:var(--t2);
+  margin-top:.3rem;
+  line-height:1.5;
+}
+
+/* ══════════════════════════════════
+   CELEBRITY CLIENTS
+══════════════════════════════════ */
+.celebs{
+  background:var(--bg);
+  padding:7rem 5rem;
+}
+.celebs-inner{max-width:1200px;margin:0 auto}
+.celeb-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:1.5rem;
+  margin-top:3.5rem;
+}
+.celeb-card{
+  position:relative;
+  cursor:default;
+}
+.celeb-img-wrap{
+  aspect-ratio:1;
+  background:var(--bg3);
+  border:1px solid var(--bd);
+  overflow:hidden;
+  margin-bottom:.9rem;
+  position:relative;
+  transition:border-color .3s;
+}
+.celeb-card:hover .celeb-img-wrap{border-color:var(--or-25)}
+.celeb-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.celeb-card:hover .celeb-img-wrap img{transform:scale(1.04)}
+.celeb-img-inner{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:.3rem;
+  color:var(--t4);
+  background:linear-gradient(135deg, var(--bg3) 0%, var(--bg4) 100%);
+}
+.celeb-initials{
+  font-family:var(--df);
+  font-size:2.2rem;
+  font-weight:500;
+  color:var(--or);
+  opacity:.55;
+  line-height:1;
+  letter-spacing:.04em;
+}
+.celeb-name{
+  font-size:.88rem;
+  font-weight:700;
+  color:var(--t1);
+  line-height:1.3;
+  margin-top:.75rem;
+}
+.celeb-role{
+  font-size:.68rem;
+  color:var(--t3);
+  margin-top:.2rem;
+  line-height:1.4;
+}
+
+/* ══════════════════════════════════
+   ABOUT SPLIT
+══════════════════════════════════ */
+.about-split{
+  background:var(--bg2);
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  min-height:580px;
+}
+.about-split-img{
+  background:linear-gradient(145deg, var(--bg3), var(--bg4));
+  overflow:hidden;
+  position:relative;
+  min-height:580px;
+}
+.about-split-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+}
+.about-split-img-placeholder{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:.8rem;
+  min-height:500px;
+}
+.about-split-img::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg, transparent 60%, var(--bg2));
+  pointer-events:none;
+}
+.about-split-text{
+  padding:5rem 4.5rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.about-split-text p{
+  color:var(--t2);
+  font-size:1rem;
+  line-height:1.95;
+  margin-bottom:1.4rem;
+}
+.about-split-text strong{color:var(--t1);font-weight:600}
+.about-split-text .btn{align-self:flex-start;margin-top:.5rem}
+
+/* ══════════════════════════════════
+   PROGRAMME
+══════════════════════════════════ */
+.programme{
+  background:var(--bg);
+  padding:7rem 5rem;
+}
+.programme-inner{max-width:1200px;margin:0 auto}
+.prog-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:1.2rem;
+  margin-top:3.5rem;
+}
+.prog-card{
+  background:var(--bg2);
+  border:1px solid var(--bd);
+  padding:2.2rem 1.6rem;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  transition:border-color .35s, transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s;
+}
+.prog-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:var(--or);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .4s cubic-bezier(.22,1,.36,1);
+}
+.prog-card:hover{
+  border-color:var(--or-15);
+  transform:translateY(-5px);
+  box-shadow:0 20px 60px rgba(0,0,0,.3), 0 0 0 1px var(--or-10);
+}
+.prog-card:hover::before{transform:scaleX(1)}
+.prog-icon{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:var(--or-10);
+  border:1px solid var(--or-15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 1.2rem;
+  font-size:1.1rem;
+  color:var(--or);
+  transition:background .3s, border-color .3s;
+}
+.prog-card:hover .prog-icon{background:var(--or-25);border-color:var(--or-25)}
+.prog-card h3{
+  font-size:.95rem;
+  font-weight:700;
+  margin-bottom:.6rem;
+  color:var(--t1);
+}
+.prog-card p{
+  font-size:.82rem;
+  color:var(--t2);
+  line-height:1.8;
+}
+
+/* ══════════════════════════════════
+   VIDEO TESTIMONIAL
+══════════════════════════════════ */
+.video-section{
+  background:var(--bg2);
+  padding:7rem 5rem;
+}
+.video-inner{max-width:900px;margin:0 auto}
+.video-wrap{
+  margin-top:3rem;
+  position:relative;
+  padding-bottom:56.25%;
+  height:0;
+  overflow:hidden;
+  border:1px solid var(--bd);
+  box-shadow:var(--sh);
+}
+.video-wrap iframe{
+  position:absolute;
+  top:0;left:0;
+  width:100%;height:100%;
+  border:none;
+}
+
+/* ══════════════════════════════════
+   WRITTEN TESTIMONIALS
+══════════════════════════════════ */
+.written{
+  background:var(--bg);
+  padding:7rem 5rem;
+}
+.written-inner{max-width:1200px;margin:0 auto}
+.written-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+  margin-top:3.5rem;
+}
+.written-card{
+  background:var(--bg2);
+  border:1px solid var(--bd);
+  padding:2.5rem;
+  position:relative;
+  overflow:hidden;
+  transition:border-color .3s, transform .35s cubic-bezier(.22,1,.36,1);
+}
+.written-card::before{
+  content:'"';
+  position:absolute;
+  top:1rem;right:1.5rem;
+  font-family:var(--df);
+  font-size:5rem;
+  color:var(--or);
+  opacity:.08;
+  line-height:1;
+  pointer-events:none;
+}
+.written-card:hover{
+  border-color:var(--or-15);
+  transform:translateY(-3px);
+}
+.w-stars{
+  display:flex;
+  gap:.15rem;
+  margin-bottom:1rem;
+}
+.w-stars span{color:var(--or);font-size:.75rem}
+.w-tag{
+  display:inline-block;
+  background:var(--or-10);
+  border:1px solid var(--or-15);
+  color:var(--or);
+  padding:.2rem .7rem;
+  font-size:.64rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  font-weight:700;
+  border-radius:2rem;
+  margin-bottom:.9rem;
+}
+.written-card blockquote{
+  font-family:var(--df);
+  font-size:1rem;
+  font-style:italic;
+  line-height:1.75;
+  margin-bottom:1.4rem;
+  color:var(--t1);
+}
+.w-author strong{
+  display:block;
+  color:var(--t2);
+  font-size:.85rem;
+  font-weight:700;
+  margin-bottom:.1rem;
+}
+.w-author span{
+  font-size:.75rem;
+  color:var(--t3);
+}
+
+/* ══════════════════════════════════
+   TRANSFORMATIONS GALLERY
+══════════════════════════════════ */
+.gallery{
+  background:var(--bg2);
+  padding:7rem 5rem;
+}
+.gallery-inner{max-width:1300px;margin:0 auto}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:.75rem;
+  margin-top:3.5rem;
+}
+.gallery-item{
+  aspect-ratio:1;
+  overflow:hidden;
+  position:relative;
+  border:1px solid var(--bd);
+  cursor:pointer;
+  transition:border-color .35s, transform .35s cubic-bezier(.22,1,.36,1);
+}
+.gallery-item:hover{
+  border-color:var(--or-25);
+  transform:scale(1.02);
+  z-index:2;
+}
+.gallery-item img{
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+.gallery-item:hover img{transform:scale(1.06)}
+.gallery-item-label{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  background:linear-gradient(to top, rgba(0,0,0,.75) 0%, transparent 100%);
+  padding:1.5rem .9rem .8rem;
+  opacity:.7;
+  transition:opacity .3s;
+}
+.gallery-item:hover .gallery-item-label{opacity:1}
+.gallery-item-label span{
+  font-size:.64rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--or);
+  font-weight:700;
+}
+/* Placeholder slot styling */
+#gallery-grid .gallery-item::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(135deg, rgba(232,120,42,.03) 0%, transparent 60%),
+    repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,.01) 20px, rgba(255,255,255,.01) 21px);
+  pointer-events:none;
+  z-index:1;
+}
+#gallery-grid .gallery-item img{
+  mix-blend-mode:normal;
+  filter:brightness(1.05);
+}
+
+/* ══════════════════════════════════
+   GET STARTED / CALENDLY
+══════════════════════════════════ */
+.get-started{
+  background:var(--bg);
+  padding:7rem 5rem;
+}
+.get-started-inner{max-width:1000px;margin:0 auto}
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+  margin:3.5rem 0;
+}
+.step{
+  text-align:center;
+  padding:2.5rem 2rem;
+  background:var(--bg2);
+  border:1px solid var(--bd);
+  position:relative;
+  transition:border-color .3s;
+}
+.step:hover{border-color:var(--or-15)}
+.step-num{
+  font-family:var(--df);
+  font-size:2.4rem;
+  color:var(--or);
+  opacity:1;
+  line-height:1;
+  margin-bottom:.6rem;
+  font-weight:800;
+  text-shadow:0 2px 10px rgba(232,120,42,.35);
+}
+.step h3{
+  font-size:1rem;
+  font-weight:700;
+  margin-bottom:.5rem;
+}
+.step p{
+  font-size:.85rem;
+  color:var(--t2);
+  line-height:1.8;
+}
+/* Connector line between steps */
+.step:not(:last-child)::after{
+  content:'→';
+  position:absolute;
+  right:-1.1rem;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--or);
+  opacity:.35;
+  font-size:1.2rem;
+  z-index:2;
+}
+.calendly-wrap{
+  margin-top:2.5rem;
+  background:var(--bg2);
+  border:1px solid var(--bd);
+  overflow:hidden;
+}
+.calendly-wrap iframe{
+  width:100%;
+  height:700px;
+  border:none;
+  display:block;
+}
+
+/* ══════════════════════════════════
+   CTA BAND
+══════════════════════════════════ */
+.cta-band{
+  background:var(--bg2);
+  border-top:1px solid var(--bd);
+  border-bottom:1px solid var(--bd);
+  padding:6rem 5rem;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.cta-band::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse 60% 80% at 50% 100%, rgba(232,120,42,.06) 0%, transparent 70%);
+  pointer-events:none;
+}
+.cta-band-inner{
+  position:relative;
+  z-index:1;
+  max-width:660px;
+  margin:0 auto;
+}
+.cta-band h2{
+  font-family:var(--df);
+  font-size:clamp(2.2rem,4.5vw,3.6rem);
+  font-weight:800;
+  line-height:1.1;
+  margin-bottom:.8rem;
+  letter-spacing:-.03em;
+  color:#fff;
+  text-shadow:var(--sh-txt);
+}
+.cta-band h2 em{font-style:normal;color:var(--or);text-shadow:0 2px 8px rgba(232,120,42,.3),0 4px 16px rgba(0,0,0,.5)}
+.cta-band p{
+  color:var(--t2);
+  font-size:1.05rem;
+  line-height:1.85;
+  margin-bottom:2.5rem;
+}
+.cta-band-btns{
+  display:flex;
+  gap:1rem;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* ══════════════════════════════════
+   FOOTER
+══════════════════════════════════ */
+footer{
+  background:var(--bg);
+  padding:5rem 5rem 3rem;
+  border-top:1px solid var(--bd);
+}
+.footer-grid{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr 1fr;
+  gap:3.5rem;
+  padding-bottom:3rem;
+  border-bottom:1px solid var(--bd);
+}
+.footer-brand img{
+  height:38px;
+  width:auto;
+  display:block;
+  margin-bottom:1.2rem;
+}
+.footer-brand p{
+  color:var(--t3);
+  font-size:.85rem;
+  line-height:1.8;
+  max-width:260px;
+}
+.footer-col h4{
+  font-size:.65rem;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  color:var(--or);
+  font-weight:700;
+  margin-bottom:1.3rem;
+}
+.footer-col a{
+  display:block;
+  color:var(--t3);
+  text-decoration:none;
+  font-size:.85rem;
+  margin-bottom:.65rem;
+  transition:color .25s;
+  cursor:pointer;
+}
+.footer-col a:hover{color:var(--t1)}
+.footer-bottom{
+  max-width:1200px;
+  margin:2rem auto 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:.73rem;
+  color:var(--t3);
+}
+
+/* ══════════════════════════════════
+   POPUP
+══════════════════════════════════ */
+.popup-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  z-index:10000;
+  justify-content:center;
+  align-items:center;
+  padding:1.5rem;
+}
+.popup-overlay.active{display:flex}
+.popup-box{
+  background:var(--bg2);
+  border:1px solid var(--bd);
+  max-width:560px;
+  width:100%;
+  position:relative;
+  animation:popIn .45s cubic-bezier(.22,1,.36,1) both;
+  overflow:hidden;
+  box-shadow:0 32px 80px rgba(0,0,0,.5);
+}
+@keyframes popIn{
+  from{opacity:0;transform:scale(.94) translateY(20px)}
+  to{opacity:1;transform:scale(1) translateY(0)}
+}
+.popup-hdr{
+  background:var(--or);
+  padding:2rem 2.5rem;
+  text-align:center;
+}
+.popup-hdr h2{
+  font-family:var(--df);
+  font-size:1.75rem;
+  font-weight:600;
+  color:#000;
+  line-height:1.2;
+  margin-bottom:.4rem;
+}
+.popup-hdr p{font-size:.88rem;color:rgba(0,0,0,.65)}
+.popup-body iframe{width:100%;height:654px;border:none;display:block}
+.popup-close{
+  position:absolute;
+  top:.8rem;right:.8rem;
+  width:34px;height:34px;
+  background:rgba(0,0,0,.25);
+  border:none;
+  color:#fff;
+  font-size:1.1rem;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  transition:background .2s;
+  z-index:10001;
+}
+.popup-close:hover{background:rgba(0,0,0,.5)}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+/* ══════════════════════════════════
+   EARLY BOOKING SECTION
+══════════════════════════════════ */
+.early-book{
+  background:var(--bg2);
+  padding:7rem 5rem;
+  border-top:1px solid var(--bd);
+}
+.early-book-inner{max-width:1000px;margin:0 auto}
+
+/* ══════════════════════════════════
+   FREE 3-DAY PLAN SECTION
+══════════════════════════════════ */
+.free-plan-section{
+  background:var(--bg2);
+  padding:7rem 5rem;
+  border-top:1px solid var(--bd);
+}
+.free-plan-inner{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5rem;
+  align-items:start;
+}
+.free-plan-text p.section-desc{margin-top:1rem;margin-bottom:2rem}
+.free-plan-bullets{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:.9rem;
+  margin-top:0;
+}
+.free-plan-bullets li{
+  display:flex;
+  align-items:flex-start;
+  gap:.8rem;
+  color:var(--t2);
+  font-size:.95rem;
+  line-height:1.6;
+}
+.free-plan-bullets li::before{
+  content:'✓';
+  color:var(--or);
+  font-weight:700;
+  font-size:.9rem;
+  margin-top:.05em;
+  flex-shrink:0;
+}
+.free-plan-form-wrap{
+  background:var(--bg3);
+  border:1px solid var(--bd);
+  overflow:hidden;
+}
+@media(max-width:900px){
+  .free-plan-inner{grid-template-columns:1fr;gap:3rem}
+}
+@media(max-width:768px){
+  .early-book{padding:5rem 1.5rem}
+  .free-plan-section{padding:5rem 1.5rem}
+}
+
+@media(max-width:1200px){
+  nav{padding:1.2rem 3rem}
+  nav.scrolled{padding:.85rem 3rem}
+  section,
+  .hero,.celebs,.programme,.video-section,.written,.gallery,.get-started,.cta-band,.stan-section{
+    padding-left:3rem;padding-right:3rem;
+  }
+  .trust{padding-left:3rem;padding-right:3rem}
+  footer{padding-left:3rem;padding-right:3rem}
+  .about-split-text{padding:4rem 3rem}
+  .celeb-grid{grid-template-columns:repeat(3,1fr)}
+  .prog-grid{grid-template-columns:repeat(3,1fr)}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+  .trust-inner{grid-template-columns:repeat(2,1fr);gap:0}
+  .trust-item:nth-child(3)::before{display:none}
+}
+@media(max-width:900px){
+  .about-split{grid-template-columns:1fr}
+  .about-split-img{min-height:300px}
+  .about-split-img::after{background:linear-gradient(to top, var(--bg2), transparent)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .written-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  nav.scrolled{padding:.8rem 1.5rem}
+  .nav-links{display:none}
+  .menu-toggle{display:flex}
+  .nav-links.open{
+    display:flex;
+    flex-direction:column;
+    position:fixed;
+    inset:0;
+    background:rgba(14,13,12,.98);
+    backdrop-filter:blur(20px);
+    justify-content:center;
+    align-items:center;
+    gap:2.5rem;
+    z-index:999;
+  }
+  .nav-links.open a{font-size:1rem;letter-spacing:.12em}
+  .hero h1{font-size:clamp(2.5rem,9vw,3.8rem)}
+  .hero-btns{flex-direction:column;align-items:center}
+  .celeb-grid{grid-template-columns:repeat(2,1fr)}
+  .prog-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr}
+  .step::after{display:none}
+  .trust-inner{grid-template-columns:1fr 1fr;gap:0}
+  .written-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:2rem}
+  .footer-bottom{flex-direction:column;gap:.5rem;text-align:center}
+  .hero,.celebs,.programme,.video-section,.written,.gallery,.get-started,.cta-band{
+    padding-left:1.5rem;padding-right:1.5rem;
+  }
+  .stan-section{padding-left:1.5rem;padding-right:1.5rem}
+  .trust{padding:3rem 1.5rem}
+  footer{padding:4rem 1.5rem 2.5rem}
+  .about-split-text{padding:3rem 1.5rem}
+  .stan-badge{right:0}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"SV Health Coaching","description":"Online fitness coaching for busy executives and professionals aged 30-55.","founder":{"@type":"Person","name":"Stan Vaccari","jobTitle":"Strength & Transformation Coach"},"areaServed":["United Kingdom","United States"],"serviceType":["Fitness Coaching","Nutrition Coaching","Executive Health Coaching"],"url":"https://www.svhealthcoaching.com"}</script>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="SV Health Coaching">
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#programme">Programme</a></li>
+    <li><a href="#transformations">Results</a></li>
+    <li><a href="about.html">About Stan</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a onclick="openCalendly()" class="nav-cta">FREE Blueprint Call</a></li>
+  </ul>
+  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <img src="logo.png" alt="SV Health Coaching" class="hero-logo">
+    <div class="hero-eyebrow">
+      Trusted by 600+ clients worldwide
+    </div>
+    <h1>
+      Rebuild your body
+      <em>without overhauling your life.</em>
+    </h1>
+    <p class="hero-sub">You don't need another diet. You don't need more cardio. You don't need to "try harder." You need a structure that survives long hours, travel, weekends and real life.<br><br>Our system has helped 600+ career driven men lose 20–60lbs, rebuild strength, stay consistent, without turning fitness into a second job.</p>
+    <div class="hero-btns">
+      <button onclick="openCalendly()" class="btn btn-or">Book Your FREE Blueprint Call</button>
+      <a href="#programme" class="btn btn-ghost">See The Programme</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ─── STAN PHOTO ─── -->
+<div class="stan-section">
+  <div class="stan-frame reveal">
+    <div class="stan-img-wrap">
+      <img src="images/stan/stan-4.jpg" alt="Stan Vaccari — SV Health Coaching">
+    </div>
+    <div class="stan-badge">
+      <span class="stan-badge-num">600+</span>
+      <span class="stan-badge-label">Clients Transformed</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── TRUST STATS ─── -->
+<div class="trust reveal">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-num">600+</div>
+      <div class="trust-label">Clients Transformed</div>
+      <div class="trust-sub">Worldwide</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num">8+</div>
+      <div class="trust-label">Years Coaching</div>
+      <div class="trust-sub">Professionals &amp; Athletes</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num">22lbs</div>
+      <div class="trust-label">Average Fat Loss</div>
+      <div class="trust-sub">In 16 Weeks</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── EARLY BOOKING ─── -->
+<section class="early-book" id="book">
+  <div class="early-book-inner">
+    <div class="text-center reveal">
+      <div class="section-tag center">Book Your Free Call</div>
+      <h2 class="section-title">Ready to start? Book your <em>FREE Blueprint Call</em></h2>
+      <p class="section-desc max-720 mx-auto">30 minutes. No hard sell. Just clarity on where you are, where you want to be, and the simplest path to get there.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h3>Book Your FREE Blueprint Call</h3>
+        <p>Pick a time that works. No cost, no obligation.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <h3>Get Clarity</h3>
+        <p>30 minute strategy call to give you clarity on your current position and the best action to take.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <h3>Begin Your Journey</h3>
+        <p>Begin your journey with Stan or take your blueprint to put in place yourself.</p>
+      </div>
+    </div>
+    <div class="calendly-wrap reveal">
+      <iframe src="https://calendly.com/svhealthcoaching/consultation-instagram-clone?embed_domain=svhealthcoaching.com&embed_type=Inline&hide_gdpr_banner=1" loading="lazy" title="Book a free consultation with SV Health Coaching"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CELEBRITY CLIENTS ─── -->
+<section class="celebs" id="clients">
+  <div class="celebs-inner">
+    <div class="text-center max-720 mx-auto reveal">
+      <div class="section-tag center">Who We've Worked With</div>
+      <h2 class="section-title">Trusted by the most <em>'time poor'</em> people</h2>
+      <p class="section-desc">From Premier League dressing rooms to TV studios. People whose schedules don't stop. Neither does their coaching.</p>
+    </div>
+    <div class="celeb-grid">
+      <div class="celeb-card reveal">
+        <div class="celeb-img-wrap">
+          <img src="images/celebs/freddie-flintoff.jpg" alt="Freddie Flintoff" loading="lazy">
+        </div>
+        <div class="celeb-name">Freddie Flintoff</div>
+        <div class="celeb-role">International Cricketer &amp; TV Star</div>
+      </div>
+      <div class="celeb-card reveal">
+        <div class="celeb-img-wrap">
+          <img src="images/celebs/jason-manford.jpg" alt="Jason Manford" loading="lazy">
+        </div>
+        <div class="celeb-name">Jason Manford</div>
+        <div class="celeb-role">Comedian &amp; TV Star</div>
+      </div>
+      <div class="celeb-card reveal">
+        <div class="celeb-img-wrap">
+          <img src="images/celebs/robbie-savage.jpg" alt="Robbie Savage" loading="lazy">
+        </div>
+        <div class="celeb-name">Robbie Savage</div>
+        <div class="celeb-role">Premier League Footballer</div>
+      </div>
+      <div class="celeb-card reveal">
+        <div class="celeb-img-wrap">
+          <img src="images/celebs/taylor.jpg" alt="Taylor Harwood-Bellis" loading="lazy">
+        </div>
+        <div class="celeb-name">Taylor Harwood-Bellis</div>
+        <div class="celeb-role">U21 World Cup Winner</div>
+      </div>
+      <div class="celeb-card reveal">
+        <div class="celeb-img-wrap">
+          <img src="images/celebs/tom-davis.jpg" alt="Tom Davis" loading="lazy">
+        </div>
+        <div class="celeb-name">Tom Davis</div>
+        <div class="celeb-role">Comedian &amp; Actor</div>
+      </div>
+      <div class="celeb-card reveal">
+        <div class="celeb-img-wrap">
+          <img src="images/celebs/charlie-savage.jpg" alt="Charlie Savage" loading="lazy">
+        </div>
+        <div class="celeb-name">Charlie Savage</div>
+        <div class="celeb-role">Wales International Footballer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT SPLIT ─── -->
+<section class="about-split" style="padding:0" id="about">
+  <div class="about-split-img">
+    <img src="images/stan/stan-1.jpg" alt="Stan Vaccari — SV Health Coaching" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block">
+  </div>
+  <div class="about-split-text reveal">
+    <div class="section-tag">Meet The Founder</div>
+    <h2 class="section-title">Stan <em>Vaccari</em></h2>
+    <p>I've helped <strong>600+ men build muscle, lose fat, and take back their health</strong> — without living in the gym. I've been where you are: time-poor, over-stressed, and running on fumes. That's exactly why this system works.</p>
+    <p>Background in <strong>martial arts and Olympic lifting</strong>. 8+ years coaching everyone from Premier League footballers to CEOs. I don't do cookie-cutter. I build around your life.</p>
+    <p>You don't need motivation. You need structure. And I can help.</p>
+    <a href="about.html" class="btn btn-ghost">Read My Full Story →</a>
+  </div>
+</section>
+
+<!-- ─── PROGRAMME ─── -->
+<section class="programme" id="programme">
+  <div class="programme-inner">
+    <div class="text-center max-720 mx-auto reveal">
+      <div class="section-tag center">The Executive Health System</div>
+      <h2 class="section-title">You don't need another plan.<br>You need <em>the right system.</em></h2>
+      <p class="section-desc">Built for men 30–55 who are done guessing. 3 hours per week. No extremes. Just results that stick.</p>
+    </div>
+    <div class="prog-grid">
+      <div class="prog-card reveal">
+        <div class="prog-icon">🏋️</div>
+        <h3>Custom Training Plan</h3>
+        <p>Built around your goals, schedule, and equipment. 3×40-minute sessions — in and out. Time-efficient for professionals.</p>
+      </div>
+      <div class="prog-card reveal">
+        <div class="prog-icon">🥗</div>
+        <h3>Custom Nutrition</h3>
+        <p>Eat real food. Stay energised. No starvation, no meal-prep marathons. Sustainable habits built for your life.</p>
+      </div>
+      <div class="prog-card reveal">
+        <div class="prog-icon">💬</div>
+        <h3>24/7 Accountability</h3>
+        <p>Direct access to Stan. Weekly check-ins, strategy calls, and form reviews. You'll never go it alone.</p>
+      </div>
+      <div class="prog-card reveal">
+        <div class="prog-icon">🏆</div>
+        <h3>Community &amp; Portal</h3>
+        <p>Member portal with education, recipe packs, weekly challenges, and exclusive content from high-performers.</p>
+      </div>
+      <div class="prog-card reveal">
+        <div class="prog-icon">📱</div>
+        <h3>Private App</h3>
+        <p>All your programming, tracking, and communication in one place. App-integrated from day one. Simple and clear.</p>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:3.5rem">
+      <button onclick="openCalendly()" class="btn btn-or">Book Your FREE Blueprint Call</button>
+    </div>
+  </div>
+</section>
+
+<!-- ─── VIDEO TESTIMONIAL ─── -->
+<section class="video-section">
+  <div class="video-inner">
+    <div class="text-center reveal">
+      <div class="section-tag center">What Our Clients Say</div>
+      <h2 class="section-title">Hear it <em>from them</em></h2>
+      <p class="section-desc">Real people. Real results. In their own words.</p>
+    </div>
+    <div class="video-wrap reveal">
+      <iframe src="https://player.vimeo.com/video/1082947251?h=dbfb6a864f&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="SV Health Coaching Client Testimonials" loading="lazy"></iframe>
+    </div>
+    <div class="text-center" style="margin-top:2.5rem">
+      <a href="testimonials.html" class="btn btn-ghost">See All Client Stories →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WRITTEN TESTIMONIALS ─── -->
+<section class="written">
+  <div class="written-inner">
+    <div class="text-center max-720 mx-auto reveal">
+      <div class="section-tag center">5-Star Reviews</div>
+      <h2 class="section-title"><em>Client</em> Experiences</h2>
+    </div>
+    <div class="written-grid">
+      <div class="written-card reveal">
+        <div class="w-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="w-tag">40lbs Lost in 4 Months</div>
+        <blockquote>"Stan gets that I can't live in the gym — he builds plans that fit my work and family life. The results speak for themselves."</blockquote>
+        <div class="w-author">
+          <strong>A.J. Abramczyk</strong>
+          <span>Senior Claims Auditor</span>
+        </div>
+      </div>
+      <div class="written-card reveal">
+        <div class="w-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="w-tag">Career Investment</div>
+        <blockquote>"The investment in your health and wellbeing to help offset the impacts of a busy high pressured career has become a must."</blockquote>
+        <div class="w-author">
+          <strong>Samantha Reed</strong>
+          <span>Risk &amp; Compliance Director</span>
+        </div>
+      </div>
+      <div class="written-card reveal">
+        <div class="w-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="w-tag">Sustainable Results</div>
+        <blockquote>"I travel, eat out, have kids and I'm in the best shape of my life. Stan doesn't preach perfection — he builds around reality."</blockquote>
+        <div class="w-author">
+          <strong>Jeremy Sumner</strong>
+          <span>Account Manager</span>
+        </div>
+      </div>
+      <div class="written-card reveal">
+        <div class="w-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="w-tag">4+ Years Training</div>
+        <blockquote>"Stan's training and diet plans have transformed the way I treat my fitness. The variety has kept everything fresh and equally challenging."</blockquote>
+        <div class="w-author">
+          <strong>Tom Hind</strong>
+          <span>Commercial Lead</span>
+        </div>
+      </div>
+      <div class="written-card reveal">
+        <div class="w-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="w-tag">Accountability That Works</div>
+        <blockquote>"He keeps me accountable but never sets unrealistic targets. Consistency without guilt — that's what changed everything for me."</blockquote>
+        <div class="w-author">
+          <strong>Client Review</strong>
+          <span>Executive</span>
+        </div>
+      </div>
+      <div class="written-card reveal">
+        <div class="w-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="w-tag">Flexible Approach</div>
+        <blockquote>"Stan will ensure you have a flexible approach that works and lets you live your best life while improving fitness, strength, and weight."</blockquote>
+        <div class="w-author">
+          <strong>Client Review</strong>
+          <span>Busy Professional</span>
+        </div>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:3rem">
+      <a href="testimonials.html" class="btn btn-ghost">See All Testimonials →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TRANSFORMATIONS ─── -->
+<section class="gallery" id="transformations">
+  <div class="gallery-inner">
+    <div class="text-center max-720 mx-auto reveal">
+      <div class="section-tag center">Success Stories</div>
+      <h2 class="section-title">Real clients. Real <em>transformations.</em></h2>
+      <p class="section-desc">Every one of these people was stuck in the start-stop cycle. No fads. No extremes. Just results that last.</p>
+    </div>
+    <div class="gallery-grid" id="gallery-grid">
+      <div class="gallery-item reveal"><img src="images/transforms/transform-1.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-2.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-3.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-4.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-5.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-6.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-7.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-8.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-9.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-10.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-11.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-12.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-13.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-14.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-15.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+      <div class="gallery-item reveal"><img src="images/transforms/transform-16.jpg" alt="Client transformation" loading="lazy"><div class="gallery-item-label"><span>Before → After</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GET STARTED ─── -->
+<section class="get-started" id="book">
+  <div class="get-started-inner">
+    <div class="text-center reveal">
+      <div class="section-tag center">How To Get Started</div>
+      <h2 class="section-title">Here's what happens in <em>the next 30 minutes</em></h2>
+      <p class="section-desc max-720 mx-auto">Book a free 30-minute Blueprint Call below. No hard sell. Just clarity on where you are, where you want to be, and the simplest path to get there.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h3>Book Your FREE Blueprint Call</h3>
+        <p>Pick a time that works. No cost, no obligation.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <h3>Get Clarity</h3>
+        <p>30 minute strategy call to give you clarity on your current position and the best action to take.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <h3>Begin Your Journey</h3>
+        <p>Begin your journey with Stan or take your blueprint to put in place yourself.</p>
+      </div>
+    </div>
+    <div class="text-center reveal" style="margin-top:2.5rem">
+      <a href="https://calendly.com/svhealthcoaching/consultation-instagram-clone" target="_blank" rel="noopener" class="btn btn-or" style="font-size:.82rem;padding:1.1rem 3rem">Book Your FREE Blueprint Call →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA BAND ─── -->
+<section class="cta-band">
+  <div class="cta-band-inner reveal">
+    <div class="section-tag center">Ready?</div>
+    <h2>It isn't easy.<br><em>But it is simple.</em></h2>
+    <p>Join 600+ professionals who've taken back their health — without sacrificing their career, family, or social life.</p>
+    <div class="cta-band-btns">
+      <button onclick="openCalendly()" class="btn btn-or">Book Your FREE Blueprint Call</button>
+      <a href="about.html" class="btn btn-ghost">Meet Stan First</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="SV Health Coaching">
+      <p>Online fitness coaching for busy executives and professionals. Build muscle, lose fat, reclaim your health — in just 3 hours per week.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Stan</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="#programme">Programme</a>
+      <a href="#transformations">Results</a>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a onclick="openCalendly()">Book a Free Call</a>
+      <a href="https://www.instagram.com/svhealthcoaching" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/in/stanvaccari" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="https://www.svhealthcoaching.com" target="_blank" rel="noopener">svhealthcoaching.com</a>
+      <a href="mailto:stan@svhealthcoaching.com">stan@svhealthcoaching.com</a>
+      <a>United Kingdom</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 SV Health Coaching. All rights reserved.</span>
+    <span>Stan Vaccari — United Kingdom</span>
+  </div>
+</footer>
+
+<!-- ─── POPUP ─── -->
+<div class="popup-overlay" id="exitPopup">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()" aria-label="Close">✕</button>
+    <div class="popup-hdr">
+      <h2>Grab your free 3-Day Full Body Plan</h2>
+      <p>Built for busy men. No gym marathons. Just results.</p>
+    </div>
+    <div class="popup-body">
+      <iframe src="https://api.leadconnectorhq.com/widget/form/pOt3ZFmvwNeFmj1pmy7g" id="inline-pOt3ZFmvwNeFmj1pmy7g" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="3 DAY PLAN FOR BUSY MEN" data-height="654" data-layout-iframe-id="inline-pOt3ZFmvwNeFmj1pmy7g" data-form-id="pOt3ZFmvwNeFmj1pmy7g" title="3 DAY PLAN FOR BUSY MEN"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SCRIPTS ─── -->
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+<script>
+// Calendly
+function openCalendly(){
+  if(typeof Calendly !== 'undefined'){
+    Calendly.initPopupWidget({url:'https://calendly.com/svhealthcoaching/consultation-instagram-clone'});
+  }
+  return false;
+}
+
+// Nav scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+}, {passive:true});
+
+// Mobile menu
+function toggleMenu(){
+  const links = document.getElementById('navLinks');
+  links.classList.toggle('open');
+  document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
+}
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+// Scroll reveal
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if(entry.isIntersecting){
+      setTimeout(() => entry.target.classList.add('visible'), i * 65);
+      revealObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// Smooth scroll anchors
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e){
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+  });
+});
+
+// Exit popup
+let popShown = false;
+function showPopup(){
+  if(popShown || sessionStorage.getItem('svP')) return;
+  popShown = true;
+  sessionStorage.setItem('svP','1');
+  document.getElementById('exitPopup').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closePopup(){
+  document.getElementById('exitPopup').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('mouseleave', e => { if(e.clientY <= 0) showPopup(); });
+setTimeout(() => { if(!popShown && /Mobi|Android/i.test(navigator.userAgent)) showPopup(); }, 45000);
+document.getElementById('exitPopup').addEventListener('click', function(e){ if(e.target === this) closePopup(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closePopup(); });
+</script>
+</body>
+</html>

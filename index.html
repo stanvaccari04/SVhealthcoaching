@@ -1085,23 +1085,23 @@ footer{
 }
 .popup-hdr p{font-size:.88rem;color:rgba(0,0,0,.65)}
 .popup-body iframe{width:100%;height:654px;border:none;display:block}
-.popup-close{
-  position:absolute;
-  top:.8rem;right:.8rem;
-  width:34px;height:34px;
-  background:rgba(0,0,0,.25);
-  border:none;
-  color:#fff;
-  font-size:1.1rem;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  transition:background .2s;
-  z-index:10001;
+.popup-dismiss{
+  text-align:center;
+  padding:.75rem 1rem;
+  background:var(--bg2);
+  border-top:1px solid var(--bd);
 }
-.popup-close:hover{background:rgba(0,0,0,.5)}
+.popup-dismiss button{
+  background:none;
+  border:none;
+  color:var(--t3);
+  font-size:.8rem;
+  cursor:pointer;
+  text-decoration:underline;
+  padding:.25rem .5rem;
+  transition:color .2s;
+}
+.popup-dismiss button:hover{color:var(--t1)}
 
 /* ══════════════════════════════════
    RESPONSIVE
@@ -1273,10 +1273,6 @@ footer{
       <button onclick="openCalendly()" class="btn btn-or">Book Your FREE Blueprint Call</button>
       <a href="#programme" class="btn btn-ghost">See The Programme</a>
     </div>
-  </div>
-  <div class="hero-scroll">
-    <div class="hero-scroll-line"></div>
-    <span>Scroll</span>
   </div>
 </section>
 
@@ -1657,13 +1653,15 @@ footer{
 <!-- ─── POPUP ─── -->
 <div class="popup-overlay" id="exitPopup">
   <div class="popup-box">
-    <button class="popup-close" onclick="closePopup()" aria-label="Close">✕</button>
     <div class="popup-hdr">
       <h2>Grab your free 3-Day Full Body Plan</h2>
       <p>Built for busy men. No gym marathons. Just results.</p>
     </div>
     <div class="popup-body">
       <iframe src="https://api.leadconnectorhq.com/widget/form/pOt3ZFmvwNeFmj1pmy7g" id="inline-pOt3ZFmvwNeFmj1pmy7g" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="3 DAY PLAN FOR BUSY MEN" data-height="654" data-layout-iframe-id="inline-pOt3ZFmvwNeFmj1pmy7g" data-form-id="pOt3ZFmvwNeFmj1pmy7g" title="3 DAY PLAN FOR BUSY MEN"></iframe>
+    </div>
+    <div class="popup-dismiss">
+      <button onclick="closePopup()">No thanks</button>
     </div>
   </div>
 </div>
